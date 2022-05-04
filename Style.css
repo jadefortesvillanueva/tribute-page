@@ -1,19 +1,24 @@
+
         body {
             background-image: url(assets/img/galaxy.gif);
             margin: 20%;
         }
  
+        html {
+            scroll-behavior: smooth;
+        }
       
-        #title {
+        .title {
             font-family: monospace;
             text-align: center;
             text-shadow: 10px 10px 10px rgb(27, 99, 117);
             font-size: 10vh;
             color:rgb(97, 180, 235);
+            
         }
-        
-        #title:hover {
-            color: green;
+    
+        .title:hover {
+            color: white;
         }
  
        
@@ -24,13 +29,14 @@
             width: 80%;
             height: 80%;
             background-color: aqua;
-            border-radius: 10%;
+            border-radius: 80px;
             position: relative;
             transition:top ease 1s ;
+            
         }
  
         img:hover {
-            top: -10px;
+            top: -20px;
         }
        
         #caption {
@@ -38,9 +44,15 @@
             font-size: 25px;
             font-family: Gill Sans;
             color: rgba(243, 230, 112, 0.712);
+            position: relative;
+            transition:top ease 1s ;
             
         }
  
+        #caption:hover {
+            top: 10px;
+            color: goldenrod;
+        }
         
         div#tribute-data {
             background-color: rgba(46, 63, 139, 0.274);
@@ -76,7 +88,18 @@
              color: rgb(214, 230, 245);
         
          }
-           
-        h1:hover {
-            color: green;
-        }
+
+        .titlezz {
+            position: relative;
+            animation: titlez;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in;
+            animation-direction: normal;
+            animation-play-state: running;
+          }
+
+          @keyframes titlez {
+            0%   {left: 20px; top: 20px;}
+            100%  {left: 0px; top: 20px;}
+          }
